@@ -1,4 +1,4 @@
-# hashcat_wrapper.py (Hashcat Wrapper TUI)
+# BETA: hashcat_wrapper.py (Hashcat Wrapper TUI)
 
 A **Textual**-based terminal UI (TUI) front-end for building and running **Hashcat** commands interactively. It focuses on repeatable “recipe” selection (hash file + mode + rules + wordlists + flags), adds safety checks via history, and supports piping input from **PRINCE Processor**.
 
