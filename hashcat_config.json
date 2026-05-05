@@ -1,0 +1,66 @@
+{
+    "_comment": "hashcat_helper configuration — edit paths to match your environment",
+
+  "hashcat": {
+    "windows": "hashcat.exe",
+    "wsl": "./hashcat.exe",
+    "linux": "hashcat"
+  },
+	
+	"hash_files_directories": [
+		"/home/willard/hashes",
+		"/mnt/c/PenTesting/data/hashes"
+		],
+		
+    "princeprocessor": {
+        "windows": "C:\\PenTesting\\data\\princeprocessor\\pp64.exe",
+        "wsl":     "/mnt/c/PenTesting/data/princeprocessor/pp64.exe",
+        "linux":   "/home/user/princeprocessor/pp64.bin"
+    },
+
+    "rules_directories": [
+        "/mnt/c/PenTesting/data/hashcat-6.2.6/rules",
+		"/mnt/c/PenTesting/data/hashcat-6.2.6/hcrules"
+    ],
+
+    "wordlist_directories": [
+        "/mnt/c/PenTesting/data/wordlists",
+        "/mnt/c/PenTesting/data/converted"
+    ],
+	
+	"prince_wordlist_directories":[
+		"/mnt/c/PenTesting/data/wordlists",
+        "/mnt/c/PenTesting/data/converted"
+	],
+    "hash_modes": {
+        "0":     "MD5",
+        "10":    "md5($pass.$salt)",
+        "20":    "md5($salt.$pass)",
+        "100":   "SHA1",
+        "500":   "md5crypt ($apr1$ / $1$)",
+        "900":   "MD4",
+        "1000":  "NTLM",
+        "1400":  "SHA-256",
+        "1700":  "SHA-512",
+        "1800":  "sha512crypt ($6$)",
+        "3000":  "LM",
+        "5500":  "NetNTLMv1 / NetNTLMv1+ESS",
+        "5600":  "NetNTLMv2",
+        "7500":  "Kerberos 5 AS-REQ Pre-Auth etype 23",
+        "13100": "Kerberos 5 TGS-REP etype 23",
+        "18200": "Kerberos 5 AS-REP etype 23",
+        "22000": "WPA-PBKDF2-PMKID+EAPOL"
+    },
+
+    "warn_days": 7,
+
+    "default_output_file": "/mnt/c/PenTesting/data/hashcat-6.2.6/master.txt",
+
+    "default_flags": [
+      "--self-test-disable",
+      "--bitmap-max 26",
+      "-O",
+      "--force",
+      "--username"
+    ]
+}
